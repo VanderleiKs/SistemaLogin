@@ -40,5 +40,10 @@ namespace SistemaLogin.domain
             }
             return false;
         }
+
+        public static void Sair()
+        {
+            UsuarioLogado = null;
+        }
     }
 }

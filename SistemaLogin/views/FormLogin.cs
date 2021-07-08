@@ -1,5 +1,6 @@
 ﻿using SistemaLogin.domain;
 using SistemaLogin.entities;
+using SistemaLogin.views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace SistemaLogin
 {
     public partial class FormLogin : Form
     {
+        public static bool Cancelar = false;
+        public static bool Cadastro = false;
         public FormLogin()
         {
             InitializeComponent();
@@ -21,8 +24,8 @@ namespace SistemaLogin
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            FormLogin f = new();
-            
+            Cancelar = true;
+            Close();
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
@@ -39,24 +42,14 @@ namespace SistemaLogin
                 txtSenha.Text = "";
                 txtUsuario.Focus();
             }
-
-
-
-           // Usuario user = CadastroUsuario.usuarios
-           //                .FirstOrDefault(u => u.Nome == txtUsuario.Text);
-           // if (user == null)
-           // {
-           //     MessageBox.Show("Usuario não encontrado");
-           // }                        
-           //else if(user.Senha == txtSenha.Text)         
-           // {
-
-           //     MessageBox.Show("Usuario com senha correta");
-           // }
-           // else
-           // {
-           //     MessageBox.Show("Usuario sem senha correta");
-           // }
         }
+
+        private void lblNaoCad_Click(object sender, EventArgs e)
+        {
+            Cadastro = true;
+            FormCadastro cad = new();
+            
+                cad.Show();
+         }
     }
 }

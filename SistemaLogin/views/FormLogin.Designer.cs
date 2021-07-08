@@ -35,6 +35,7 @@ namespace SistemaLogin
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLogar = new System.Windows.Forms.Button();
+            this.lblNaoCad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -81,7 +82,7 @@ namespace SistemaLogin
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Crimson;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.Location = new System.Drawing.Point(40, 196);
+            this.btnCancelar.Location = new System.Drawing.Point(40, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 48);
             this.btnCancelar.TabIndex = 4;
@@ -93,7 +94,7 @@ namespace SistemaLogin
             // 
             this.btnLogar.BackColor = System.Drawing.Color.Lime;
             this.btnLogar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLogar.Location = new System.Drawing.Point(259, 196);
+            this.btnLogar.Location = new System.Drawing.Point(259, 217);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(123, 48);
             this.btnLogar.TabIndex = 5;
@@ -102,13 +103,26 @@ namespace SistemaLogin
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             this.btnLogar.Enter += new System.EventHandler(this.btnLogar_Click);
             // 
+            // lblNaoCad
+            // 
+            this.lblNaoCad.AutoSize = true;
+            this.lblNaoCad.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNaoCad.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblNaoCad.Location = new System.Drawing.Point(40, 172);
+            this.lblNaoCad.Name = "lblNaoCad";
+            this.lblNaoCad.Size = new System.Drawing.Size(116, 13);
+            this.lblNaoCad.TabIndex = 6;
+            this.lblNaoCad.Text = "Não possuo cadastro";
+            this.lblNaoCad.Click += new System.EventHandler(this.lblNaoCad_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(422, 276);
+            this.ClientSize = new System.Drawing.Size(422, 304);
             this.ControlBox = false;
+            this.Controls.Add(this.lblNaoCad);
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtSenha);
@@ -132,5 +146,6 @@ namespace SistemaLogin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLogar;
+        private System.Windows.Forms.Label lblNaoCad;
     }
 }
