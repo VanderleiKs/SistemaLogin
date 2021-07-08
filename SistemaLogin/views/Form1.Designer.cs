@@ -31,6 +31,7 @@ namespace SistemaLogin
         {
             this.lblInicial = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@ namespace SistemaLogin
             this.nome = new System.Windows.Forms.ColumnHeader();
             this.email = new System.Windows.Forms.ColumnHeader();
             this.senha = new System.Windows.Forms.ColumnHeader();
-            this.btnSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,21 @@ namespace SistemaLogin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 452);
             this.panel1.TabIndex = 1;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(3, 394);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(143, 47);
+            this.btnSair.TabIndex = 3;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnUsuarios
             // 
@@ -114,22 +129,21 @@ namespace SistemaLogin
             // 
             // listUsuarios
             // 
+            this.listUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.nome,
             this.email,
             this.senha});
-            this.listUsuarios.Enabled = false;
-            this.listUsuarios.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listUsuarios.GridLines = true;
-            this.listUsuarios.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listUsuarios.HideSelection = false;
             this.listUsuarios.HoverSelection = true;
             this.listUsuarios.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listUsuarios.Location = new System.Drawing.Point(198, 34);
             this.listUsuarios.Name = "listUsuarios";
             this.listUsuarios.RightToLeftLayout = true;
-            this.listUsuarios.Size = new System.Drawing.Size(514, 393);
+            this.listUsuarios.Size = new System.Drawing.Size(510, 393);
             this.listUsuarios.TabIndex = 2;
             this.listUsuarios.UseCompatibleStateImageBehavior = false;
             this.listUsuarios.View = System.Windows.Forms.View.Details;
@@ -155,21 +169,6 @@ namespace SistemaLogin
             // 
             this.senha.Text = "Senha";
             this.senha.Width = 100;
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(3, 394);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(143, 47);
-            this.btnSair.TabIndex = 3;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // Form1
             // 

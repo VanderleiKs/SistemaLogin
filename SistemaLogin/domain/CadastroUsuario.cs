@@ -17,7 +17,7 @@ namespace SistemaLogin.domain
         public static void AddUsuario(string nome, string email, string senha)
         {
             IdC++;
-            usuarios.Add(new Usuario(IdC, nome, email, senha));
+            usuarios.Add(new Usuario(IdC, nome, email, Convert.ToBase64String(Encoding.UTF8.GetBytes(senha))));
             
         }
 
@@ -33,7 +33,7 @@ namespace SistemaLogin.domain
             {
                 return false;
             }
-            else if(user.Senha == senha)
+            else if(Encoding.UTF8.GetString(Convert.FromBase64String(user.Senha)) == senha)
             {
                 UsuarioLogado = user;
                 return true;
